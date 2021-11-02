@@ -65,10 +65,11 @@ z
 After calculating the color values, we want to apply the values in the function \textit{plot\_mesh}. Use \textit{pcolormesh} with \textit{viridis} as colors and make sure you deactivate the grid.
 
 
-
 \subsection{Sample Points}
 
-Next, we sample points, which are later used to train the local surrogate model. Complete \textit{sample\_points} by randomly sampling from a uniform distribution. Consider the lower and upper bounds from the configspace again.
+Next, we sample points, which are later used to train the local surrogate model. Complete
+\textit{sample\_points} by randomly sampling from a uniform distribution. Consider the lower and
+upper bounds from the configspace again. Having a detailed look into the API will save you a lot of time.
 
 
 \subsection{Weight Points}
@@ -104,7 +105,7 @@ In this section, we use the framework \href{https://github.com/marcotcr/anchor}{
 
 Use \textit{AnchorTabularExplainer} in \textit{get\_explanation} to explain an instance. In our case, an instance is a selected point. Have a look into the API and work with the returned explanation.\\
 
-\noindent Because the framework returns human-friendly text only, we have to prepare the data for our plot. Use \href{https://docs.python.org/3/howto/regex.html}{regrex} to extract the information into a dictionary. Following patterns with $A$ as feature name placeholder and $v_-$ and $v_+$ as lower and upper values are possible:
+\noindent Because the framework returns human-friendly text only, we have to prepare the data for our plot. Use \href{https://docs.python.org/3/howto/regex.html}{regex} to extract the information into a dictionary. Following patterns with $A$ as feature name placeholder and $v_-$ and $v_+$ as lower and upper values are possible:
 
 \begin{itemize}
     \item $A < v_+$,
